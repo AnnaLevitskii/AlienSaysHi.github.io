@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>alienSayHi</title>
+    <style>
+        /* svg{
+            border: #222222 5px solid ;
+        } */
+        @keyframes move {
+            0% {-webkit-transform-origin: 50% 0%; -webkit-transform: rotate(0deg);}
+            20%{-webkit-transform-origin: 50% 0%; -webkit-transform: skewX(-20deg);}
+            100%{-webkit-transform-origin: 50% 0%; -webkit-transform: rotate(0deg);}
+        }
+        #Rarm {
+            animation: move 13s linear infinite;
+            transform-box: fill-box;
+        }
+
+        @keyframes hand {
+            /*0% {-webkit-transform-origin: 50% 0%; -webkit-transform: rotate(0deg);}*/
+            /*10% {-webkit-transform-origin: 50% 0%; -webkit-transform: translateX(-24px) rotate(35deg);}*/
+            /*40%{-webkit-transform-origin: 50% 0%; -webkit-transform: translateX(-34px) rotate(120deg);}*/
+            /*60%{-webkit-transform-origin: 20% 0%; -webkit-transform: translate(-3px, -6px) rotate(80deg);}*/
+            /*70%{-webkit-transform-origin: 20% 0%; -webkit-transform: translate(-4px, -6px) rotate(140deg);}*/
+            /*100% {-webkit-transform-origin: 50% 0%; -webkit-transform: rotate(0deg);}*/
+
+            0% {-webkit-transform-origin: 50% 0%; -webkit-transform: rotate(0deg);}
+            20% {-webkit-transform-origin: 50% 0%; -webkit-transform: translateX(-24px) rotate(35deg);}
+            40%{-webkit-transform-origin: 50% 0%; -webkit-transform: translate(-27px, 2px) rotate(120deg);}
+            60%{-webkit-transform-origin: 20% 0%; -webkit-transform: translate(-4px, -9px) rotate(80deg);}
+            70%{-webkit-transform-origin: 20% 0%; -webkit-transform: translate(-4px, -7px) rotate(140deg);}
+            100% {-webkit-transform-origin: 50% 0%; -webkit-transform: rotate(0deg);}
+
+
+        }
+        #Rhand{
+            animation: hand 13s linear infinite;
+            transform-box: fill-box;
+        }
+
+    </style>
+</head>
+<body>
+<svg width="550" height="750">
+    <defs>
+        <radialGradient id="RadGradient" cx="0.5" cy="0.2" r="0.25" >
+            <stop offset="0%" stop-color="white"/>
+            <stop offset="100%" stop-color="black"/>
+        </radialGradient>
+        <radialGradient id="RadGradient2" cx="0.5" cy="0.2" r="0.25" >
+            <stop offset="0%" stop-color="white"/>
+            <stop offset="100%" stop-color="black"/>
+        </radialGradient>
+    </defs>
+    <g id="neck">
+        <path d="M 255 217 A 50 40, -28, 0, 1, 250 240 L 288 240 L 283 217 A 50 40, 28, 0, 0, 283 217 " fill="#23c42e"> color of neck</path>
+        <path d="M 255 217 A 50 40, -28, 0, 1, 250 240" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">R neck</path>
+        <path d="M 283 217 A 50 40, 28, 0, 0, 288 240" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">L neck</path>
+    </g>
+    <g id="head">
+        <path d="M 269 220  A 50 40, 28, 0, 1, 269 110  A 50 40, -28, 0, 1, 269 220 " stroke="black" fill="#23c42e" stroke-width="3" >head</path>
+        <path d="M 220 150  A 30 30, 30, 0, 1, 250 185  A 30 30, -30, 0, 1, 220 150 " stroke="black" fill="url(#RadGradient)" stroke-width="3" >R eye</path>
+        <path d="M 317 150  A 30 30, 30, 0, 1, 287 185  A 30 30, -30, 0, 1, 317 150 " stroke="black" fill="url(#RadGradient2)" stroke-width="3" >L eye</path>
+    </g>
+    <g id="shoulders">
+        <path d="M 251 240 L 230 242 L 210 270 L 297 270 L 328 270 L 308 242 L 287 240" fill="#23c42e">color of shoulders</path>
+        <path d="M 251 240 Q 240 241, 230 242 T 210 270" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">R shoulder</path>
+        <path d="M 287 240 Q 297 241, 308 242 T 328 270" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">L shoulder</path>
+    </g>
+    <g id="body">
+        <path d="M 240 270 L 240 350 L 297 350 L  297 270 " fill="#23c42e">color of body</path>
+        <path d="M 240 270 V 350" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">R body</path>
+        <path d="M 297 270 V 350" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">L body</path>
+    </g>
+    <g id="ass">
+        <path d="M 240 349 L 238 380 L 299 380 L 297 349" fill="#23c42e">color of ass</path>
+        <path d="M 240 349 L 238 380" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">R ass</path>
+        <path d="M 297 349 L 299 380" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">L ass</path>
+
+    </g>
+    <g id="legs">
+        <path d="M 238 380 L 234 465 Q 227 471, 235 480 L 255 480 Q 262 470, 254 465 Q 265 390, 268.5 380" fill="#23c42e">color of R leg start</path>
+        <path d="M 238 380 L 234 465 Q 227 471, 235 480 M 255 480 Q 262 470, 254 465 Q 265 390, 268.5 380" stroke="black" fill="none" stroke-width="3" stroke-linejoin="round" >R leg start</path>
+        <path d="M 234 479 L 230 563 L 218 575 L 230 579 L 244 561 Q 255 500, 255 479" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">R leg end</path>
+        <path d="M 226 563 Q 230 549, 244 555 M 226 563 L 213 575 A 12 25 -140 1 0 238 579 L 249 561 A 12 25 -140 0 0 244 555 " stroke="black" fill="black" stroke-width="3" stroke-linejoin="round">R boot</path>
+
+
+        <path d="M 203 600 A 12 25 -140 1 0 242 579 L 249 561 M 215 578 L 230 584 L 230 578 L 215 573 L 215 578 M 220 568 L 235 573 L 235 567 L 220 563 L 220 568 M 206 588 A 12 25 -140 0 0 230 594 L 204 588 M 230 594 L 238 579 L 249 561" stroke="black" fill="white" stroke-width="3" stroke-linejoin="round">R boot white part</path>
+        <path d="M 204 588 L 230 594 L 249 561   L 230 575 L 230 584 L 215 578 Z" fill="black">color black of R boot</path>
+        <path d="M 299 380 L 303 465 Q 310 471, 302 480 L 282 480 Q 275 470, 283 465 Q 272 390, 268.5 380" fill="#23c42e">color of L leg start</path>
+        <path d="M 299 380 L 303 465 Q 310 471, 302 480 M 282 480 Q 275 470, 283 465 Q 272 390, 268.5 380" stroke="black" fill="none" stroke-width="3" stroke-linejoin="round">L leg start</path>
+        <path d="M 302 479 L 309 563 L 320 575 L 309 579 L 295 561 Q 282 500, 283 479 " stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">L leg end</path>
+        <path d="M 309 563 Q 305 549, 295 555 M 309 563 L 325 575 A 12 25 140 1 1 301 579 L 290 561 A 12 25 140 0 1 295 555" stroke="black" fill="black" stroke-width="3" stroke-linejoin="round">L boot</path>
+        <path d="M 337 600 A 12 25 140 1 1 298 581 L 290 561 M 324 578 L 309 584 L 309 578 L 324 573 L 324 578 M 314 568 L 304 573 L 304 567 L 314 563 L 314 568 M 333 588 A 12 25 140 0 1 309 594 L 333 588 M 309 594 L 301 579" stroke="black" fill="white" stroke-width="3" stroke-linejoin="round">L boot white part</path>
+        <path d="M 333 588 L 309 594 L 290 561   L 309 575 L 309 584 L 324 578 Z" fill="black">color black of R boot</path>
+    </g>
+    <g id="arms">
+        <g id="Rarm">
+            <path d="M 210 270 Q 208 280, 209 300 Q 212 320, 209 330 Q 205 335, 209 340 L 225 340 Q 228 335, 225 330 Q 228 280, 240 270" fill="#23c42e">color of R arm</path>
+            <path d="M 210 270 Q 208 280, 209 300 Q 212 320, 209 330 Q 205 335, 209 340 Q 217 343, 225 340 Q 228 335, 225 330 Q 228 280, 240 270" stroke="black" fill="none" stroke-width="3" stroke-linejoin="round">R arm</path>
+        </g>
+        <path d="M 328 270 Q 330 280, 329 300 Q 326 320, 329 330 Q 333 335, 329 340 L 313 340 Q 310 335, 313 330 Q 310 280, 297 270" fill="#23c42e">color of L arm</path>
+        <path d="M 328 270 Q 330 280, 329 300 Q 326 320, 329 330 Q 333 335, 329 340 M 313 340 Q 310 335, 313 330 Q 310 280, 297 270" stroke="black" fill="none" stroke-width="3" stroke-linejoin="round">L arm</path>
+    </g>
+    <g id="hands">
+        <g id="Rhand">
+            <path d="M 209 339 L 210 380 Q 205 445, 215 420 Q 215 380, 220 400 Q 225 445, 229 420 Q 225 380, 233 400 Q 239 443, 241 413 Q 243 400, 225 339" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">R hand</path>
+        </g>
+        <path d="M 329 339 L 328 380 Q 333 445, 323 420 Q 323 380, 318 400 Q 313 445, 309 420 Q 313 380, 305 400 Q 299 443, 297 413 Q 295 400, 313 339" stroke="black" fill="#23c42e" stroke-width="3" stroke-linejoin="round">L hand</path>
+    </g>
+</svg>
+</body>
+</html>
